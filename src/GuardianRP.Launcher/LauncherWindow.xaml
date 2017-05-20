@@ -45,5 +45,7 @@
             </VisualBrush.Visual>
         </VisualBrush>
     </Window.Resources>
-    <Grid Background="{StaticResource BackgroundBrush}" x:Name="GridWidth"/>
+    <Grid Background="{StaticResource BackgroundBrush}" x:Name="GridWidth">
+        <Control:LoadingBar Progress="50" Label="Much kek"/>
+    </Grid>
 </Window>

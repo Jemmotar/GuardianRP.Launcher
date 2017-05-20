@@ -20,28 +20,39 @@ namespace GuardianRP.Launcher.UI.Control {
 
         private readonly    Storyboard          _barStoryboard  = new Storyboard();
         private readonly    DoubleAnimation     _barAnimation   = new DoubleAnimation();
-        private             byte                _value          = 0;
-        private             bool                _customText     = false;
 
-        public byte Value {
+        public static readonly DependencyProperty PropertyProgress = DependencyProperty.Register(
+            "Progress", typeof(byte), typeof(LoadingBar), new PropertyMetadata((byte)0), new ValidateValueCallback(IsProgressValid)
+        );
+
+        public static readonly DependencyProperty PropertyLabel = DependencyProperty.Register(
+            "Label", typeof(string), typeof(LoadingBar), new PropertyMetadata(null)
+        );
+
+        /// <summary>
+        /// Loading bar progress as procentage
+        /// </summary>
+        public byte Progress {
             get {
-                return _value;
+                return (byte) GetValue(PropertyProgress);
             }
             set {
-                if(value >= 0 && value <= 100) {
-                    UpdateBar(value);
-                    _value = value;
-                }
+                UpdateProgress(value);
+                SetValue(PropertyProgress, value);
             }
         }
 
-        public string Text {
+        /// <summary>
+        /// Loading bar label, if empty or null defaults to progress procentage
+        /// </summary>
+        public string Label {
             get {
-                return LabelProgress.Content as string;
+                return (string) GetValue(PropertyLabel);
             }
             set {
-                _customText = value != null;
-                if(_customText) LabelProgress.Content = value;
+                SetValue(PropertyLabel, value);
+                if(!string.IsNullOrEmpty(value))
+                    LabelProgress.Content = value;
             }
         }
 
@@ -58,12 +69,19 @@ namespace GuardianRP.Launcher.UI.Control {
             Storyboard.SetTargetProperty(_barAnimation, new PropertyPath(WidthProperty));
         }
 
-        /// <summary>
-        /// Update progress bar with new value and triggers animation
-        /// </summary>
-        /// <param name="procentage">New bar value as procentage</param>
-        private void UpdateBar(byte procentage) {
-            if(!_customText)
+        private void OnLoaded(object sender, RoutedEventArgs e) {
+            // Initial draw
+            UpdateProgress(Progress);
+            if(!string.IsNullOrEmpty(Label))
+                LabelProgress.Content = Label;
+        }
+
+        private static bool IsProgressValid(object value) {
+            return (byte)value >= 0 && (byte)value <= 100;
+        }
+
+        private void UpdateProgress(byte procentage) {
+            if(string.IsNullOrEmpty(Label))
                 LabelProgress.Content = $"{procentage}%";
 
             _barAnimation.From = ImageFill.Width;
@@ -71,16 +89,6 @@ namespace GuardianRP.Launcher.UI.Control {
             _barStoryboard.Begin(this);
         }
 
-        /// <summary>
-        /// Set value/text pair
-        /// </summary>
-        /// <param name="value">Procentage value</param>
-        /// <param name="text">Label text</param>
-        public void SetState(byte value, string text) {
-            Value = value;
-            Text = text;
-        }
-        
     }
 
 }
