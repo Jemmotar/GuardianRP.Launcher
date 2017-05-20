@@ -23,7 +23,7 @@ namespace GuardianRP.Launcher {
             // Create bar at the top of the window that allows it to be dragable
             // It is declared here to prevent the bar getting in my way while using designer
             Rectangle TopBar = new Rectangle();
-            TopBar.Width = Width - 38;
+            TopBar.Width = Width - 64;
             TopBar.Height = 40;
             TopBar.Margin = new Thickness(8, 8, 0, 0);
             TopBar.HorizontalAlignment = HorizontalAlignment.Left;
@@ -38,6 +38,10 @@ namespace GuardianRP.Launcher {
 
         private void OnExitButtonClicked(object sender, MouseButtonEventArgs e) {
             Application.Current.Shutdown();
+        }
+
+        private void OnHideClicked(object sender, MouseButtonEventArgs e) {
+            WindowState = WindowState.Minimized;
         }
 
     }

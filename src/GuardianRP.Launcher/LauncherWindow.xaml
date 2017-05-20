@@ -46,6 +46,7 @@
         </VisualBrush>
     </Window.Resources>
     <Grid Background="{StaticResource BackgroundBrush}" x:Name="InterGrid">
-        <Control:PanelButton Margin="737,3,1,479" MouseLeftButtonUp="OnExitButtonClicked"/>
+        <Control:PanelButton Margin="737,3,1,479" MouseLeftButtonUp="OnExitButtonClicked" Variant="Exit"/>
+        <Control:PanelButton HorizontalAlignment="Left" Margin="713,3,0,0" VerticalAlignment="Top" Variant="Hide" MouseLeftButtonUp="OnHideClicked"/>
     </Grid>
 </Window>

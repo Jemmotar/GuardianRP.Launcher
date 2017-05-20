@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GuardianRP.Launcher.UI.Control"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300" Width="30" Height="30" MouseDown="OnMouseDown" MouseUp="OnMouseUp">
+             d:DesignHeight="300" d:DesignWidth="300" Width="30" Height="30" MouseDown="OnMouseDown" MouseUp="OnMouseUp" Loaded="OnLoaded" Cursor="Hand">
     <Viewbox StretchDirection="Both" Stretch="Uniform">
         <Image x:Name="ImageButton" HorizontalAlignment="Left" Height="30" Margin="0" VerticalAlignment="Top" Width="30" Source="/GuardianRP.Launcher.UI;component/Resources/PanelButtonExit.PNG" Stretch="None"/>
     </Viewbox>

@@ -18,7 +18,8 @@ namespace GuardianRP.Launcher.UI.Control {
     public partial class PanelButton : UserControl {
 
         public enum Variants {
-            Exit
+            Exit,
+            Hide
         }
 
         public static Dictionary<Variants, BitmapFrame[]> Textures = new Dictionary<Variants, BitmapFrame[]>() {
@@ -27,6 +28,13 @@ namespace GuardianRP.Launcher.UI.Control {
                     BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.Launcher.UI;component/Resources/PanelButtonExit.PNG")),
                     BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.Launcher.UI;component/Resources/PanelButtonExitDown.PNG")),
                     BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.Launcher.UI;component/Resources/PanelButtonExitDisabled.PNG"))
+                }
+            },
+            {
+                Variants.Hide, new BitmapFrame[] {
+                    BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.Launcher.UI;component/Resources/PanelButtonHide.PNG")),
+                    BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.Launcher.UI;component/Resources/PanelButtonHideDown.PNG")),
+                    BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.Launcher.UI;component/Resources/PanelButtonHideDisabled.PNG"))
                 }
             }
         };
@@ -61,6 +69,9 @@ namespace GuardianRP.Launcher.UI.Control {
 
         public PanelButton() {
             InitializeComponent();
+        }
+
+        private void OnLoaded(object sender, RoutedEventArgs e) {
             UpdateImage(); // Initial draw
         }
 
@@ -69,14 +80,15 @@ namespace GuardianRP.Launcher.UI.Control {
         }
 
         private void OnMouseDown(object sender, MouseButtonEventArgs e) {
-           IsPressed = e.LeftButton == MouseButtonState.Pressed;
-           CaptureMouse();
+            IsPressed = e.LeftButton == MouseButtonState.Pressed;
+            CaptureMouse();
         }
 
         private void OnMouseUp(object sender, MouseButtonEventArgs e) {
             IsPressed = e.LeftButton == MouseButtonState.Pressed;
             Mouse.Capture(null);
         }
+
     }
 
 }
