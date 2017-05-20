@@ -19,6 +19,21 @@ namespace GuardianRP.Launcher {
 
         public MainWindow() {
             InitializeComponent();
+
+            // Create bar at the top of the window that allows it to be dragable
+            // It is declared here to prevent the bar getting in my way while using designer
+            Rectangle TopBar = new Rectangle();
+            TopBar.Width = Width - 12;
+            TopBar.Height = 40;
+            TopBar.Margin = new Thickness(8, 8, 0, 0);
+            TopBar.HorizontalAlignment = HorizontalAlignment.Left;
+            TopBar.VerticalAlignment = VerticalAlignment.Top;
+            TopBar.Fill = Brushes.Transparent;
+            TopBar.MouseDown += (sender, args) => {
+                if(args.ChangedButton == MouseButton.Left)
+                    DragMove();
+            };
+            InterGrid.Children.Add(TopBar);
         }
 
         private void OnLoaded(object sender, RoutedEventArgs e) {

@@ -24,7 +24,7 @@
                             <ImageBrush ImageSource="Resources/LancherBackground.PNG" TileMode="FlipX" Viewport="0,0,256,256" ViewportUnits="Absolute"/>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Grid Width="{Binding Path=ActualWidth, ElementName=GridWidth}">
+                    <Grid Width="{Binding Path=ActualWidth, ElementName=InterGrid}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="256"/>
                             <ColumnDefinition Width="*"/>
@@ -45,7 +45,5 @@
             </VisualBrush.Visual>
         </VisualBrush>
     </Window.Resources>
-    <Grid Background="{StaticResource BackgroundBrush}" x:Name="GridWidth">
-        <Control:LoadingBar Progress="50" Label="Much kek"/>
-    </Grid>
+    <Grid Background="{StaticResource BackgroundBrush}" x:Name="InterGrid"/>
 </Window>
