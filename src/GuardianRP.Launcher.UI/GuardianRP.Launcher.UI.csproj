@@ -44,12 +44,19 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\PanelButton.xaml.cs">
+      <DependentUpon>PanelButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Control\LoadingBar.xaml.cs">
       <DependentUpon>LoadingBar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Control\PanelButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Control\LoadingBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -61,6 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\LoadingBarBackground.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PanelButtonExitDisabled.PNG" />
+    <Resource Include="Resources\PanelButtonExitDown.PNG" />
+    <Resource Include="Resources\PanelButtonExit.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,7 +7,7 @@
         xmlns:clr="clr-namespace:System;assembly=mscorlib"
         xmlns:Control="clr-namespace:GuardianRP.Launcher.UI.Control;assembly=GuardianRP.Launcher.UI" x:Class="GuardianRP.Launcher.MainWindow"
         mc:Ignorable="d"
-        Title="GuardianRP.Launcher" Height="512" Width="768" ResizeMode="CanMinimize" Loaded="OnLoaded" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent" AllowsTransparency="True">
+        Title="GuardianRP.Launcher" Height="512" Width="768" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent" AllowsTransparency="True">
 
     <Window.Resources>
         <ImageBrush x:Key="CenterTop" ImageSource="Resources/LancherBackgroundTop.PNG"  TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 256 256"/>
@@ -45,5 +45,7 @@
             </VisualBrush.Visual>
         </VisualBrush>
     </Window.Resources>
-    <Grid Background="{StaticResource BackgroundBrush}" x:Name="InterGrid"/>
+    <Grid Background="{StaticResource BackgroundBrush}" x:Name="InterGrid">
+        <Control:PanelButton Margin="737,3,1,479" MouseLeftButtonUp="OnExitButtonClicked"/>
+    </Grid>
 </Window>
