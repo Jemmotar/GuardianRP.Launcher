@@ -102,7 +102,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <Resource Include="Resources\LancherBackground.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\LancherBackgroundBotLeft.PNG" />
+    <Resource Include="Resources\LancherBackgroundBotRight.PNG" />
+    <Resource Include="Resources\LancherBackgroundBot.PNG" />
+    <Resource Include="Resources\LancherBackgroundTop.PNG" />
+    <Resource Include="Resources\LancherBackgroundTopLeft.PNG" />
+    <Resource Include="Resources\LancherBackgroundTopRight.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

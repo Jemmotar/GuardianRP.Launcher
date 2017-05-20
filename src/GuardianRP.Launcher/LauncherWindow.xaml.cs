@@ -25,9 +25,6 @@ namespace GuardianRP.Launcher {
 
         }
 
-        private void button_Click(object sender, RoutedEventArgs e) {
-            lb.Value = byte.Parse(textBox.Text);
-        }
     }
 
 }

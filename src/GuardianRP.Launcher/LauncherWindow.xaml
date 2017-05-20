@@ -4,12 +4,46 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GuardianRP.Launcher"
+        xmlns:clr="clr-namespace:System;assembly=mscorlib"
         xmlns:Control="clr-namespace:GuardianRP.Launcher.UI.Control;assembly=GuardianRP.Launcher.UI" x:Class="GuardianRP.Launcher.MainWindow"
         mc:Ignorable="d"
-        Title="GuardianRP.Launcher" Height="350" Width="525" ResizeMode="CanMinimize" Loaded="OnLoaded">
-    <Grid>
-        <Control:LoadingBar x:Name="lb" HorizontalAlignment="Left" Margin="55,235,0,0" VerticalAlignment="Top" Height="50" Width="380"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="105,155,0,0" TextWrapping="Wrap" Text="80" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="240,158,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-    </Grid>
+        Title="GuardianRP.Launcher" Height="512" Width="768" ResizeMode="CanMinimize" Loaded="OnLoaded" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent" AllowsTransparency="True">
+
+    <Window.Resources>
+        <ImageBrush x:Key="CenterTop" ImageSource="Resources/LancherBackgroundTop.PNG"  TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 256 256"/>
+        <ImageBrush x:Key="LeftTop" ImageSource="Resources/LancherBackgroundTopLeft.PNG" Stretch="None" />
+        <ImageBrush x:Key="RightTop" ImageSource="Resources/LancherBackgroundTopRight.PNG" TileMode="None" />
+        <ImageBrush x:Key="CenterBot" ImageSource="Resources/LancherBackgroundBot.PNG"  TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 256 256"/>
+        <ImageBrush x:Key="LeftBot" ImageSource="Resources/LancherBackgroundBotLeft.PNG" Stretch="None" />
+        <ImageBrush x:Key="RightBot" ImageSource="Resources/LancherBackgroundBotRight.PNG" TileMode="None" />
+        <VisualBrush x:Key="BackgroundBrush">
+            <VisualBrush.Visual>
+                <Grid>
+                    <Rectangle Margin="8,16">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="Resources/LancherBackground.PNG" TileMode="FlipX" Viewport="0,0,256,256" ViewportUnits="Absolute"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Grid Width="{Binding Path=ActualWidth, ElementName=GridWidth}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="256"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="86"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="256" />
+                            <RowDefinition Height="256" />
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0" Grid.Column="0" Background="{StaticResource LeftTop}"/>
+                        <Grid Grid.Row="0" Grid.Column="1" Background="{StaticResource CenterTop}" HorizontalAlignment="Stretch"/>
+                        <Grid Grid.Row="0" Grid.Column="2" Background="{StaticResource RightTop}"/>
+                        <Grid Grid.Row="1" Grid.Column="0" Background="{StaticResource LeftBot}"/>
+                        <Grid Grid.Row="1" Grid.Column="1" Background="{StaticResource CenterBot}" HorizontalAlignment="Stretch"/>
+                        <Grid Grid.Row="1" Grid.Column="2" Background="{StaticResource RightBot}"/>
+                    </Grid>
+                </Grid>
+            </VisualBrush.Visual>
+        </VisualBrush>
+    </Window.Resources>
+    <Grid Background="{StaticResource BackgroundBrush}" x:Name="GridWidth"/>
 </Window>
