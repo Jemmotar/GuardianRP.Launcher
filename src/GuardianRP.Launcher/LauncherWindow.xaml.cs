@@ -17,6 +17,8 @@ namespace GuardianRP.Launcher {
 
     public partial class MainWindow : Window {
 
+        private Api.Client.ApiClient client = new Api.Client.ApiClient("localhost");
+
         public MainWindow() {
             InitializeComponent();
 
@@ -34,6 +36,17 @@ namespace GuardianRP.Launcher {
                     DragMove();
             };
             InterGrid.Children.Add(TopBar);
+
+            // Start the api client
+            richTextBox.Document.Blocks.Clear();
+            client.Start();
+
+            client.OnApiMessageReceived += (sender, args) => {
+                richTextBox.Dispatcher.Invoke(() => {
+                    richTextBox.Document.Blocks.Add(new Paragraph(new Run(args.Message)));
+                });
+            };
+            
         }
 
         private void OnExitButtonClicked(object sender, MouseButtonEventArgs e) {

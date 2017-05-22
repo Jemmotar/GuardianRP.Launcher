@@ -8,7 +8,6 @@
         xmlns:Control="clr-namespace:GuardianRP.UI.Control;assembly=GuardianRP.UI" x:Class="GuardianRP.Launcher.MainWindow"
         mc:Ignorable="d"
         Title="GuardianRP.Launcher" Height="512" Width="768" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent" AllowsTransparency="True">
-
     <Window.Resources>
         <ImageBrush x:Key="CenterTop" ImageSource="Resources/LancherBackgroundTop.PNG"  TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 256 256"/>
         <ImageBrush x:Key="LeftTop" ImageSource="Resources/LancherBackgroundTopLeft.PNG" Stretch="None" />
@@ -48,5 +47,6 @@
     <Grid Background="{StaticResource BackgroundBrush}" x:Name="InterGrid">
         <Control:PanelButton Margin="737,3,1,479" MouseLeftButtonUp="OnExitButtonClicked" Variant="Exit"/>
         <Control:PanelButton HorizontalAlignment="Left" Margin="713,3,0,0" VerticalAlignment="Top" Variant="Hide" MouseLeftButtonUp="OnHideClicked"/>
+        <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="220" Margin="65,90,0,0" VerticalAlignment="Top" Width="285"/>
     </Grid>
 </Window>
