@@ -1,0 +1,3 @@
+[submodule "GuardianRP.Api"]
+	path = GuardianRP.Api
+	url = https://github.com/Filipsi/GuardianRP.Api
