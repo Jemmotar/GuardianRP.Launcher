@@ -35,7 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GuardianRP.Api.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -97,6 +96,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\GuardianRP.Api\src\GuardianRP.Api.Client\GuardianRP.Api.Client.csproj">
+      <Project>{7dfb2a4d-89d0-4097-9ca3-5a7ed015d3b2}</Project>
+      <Name>GuardianRP.Api.Client</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GuardianRP.UI\GuardianRP.UI.csproj">
       <Project>{BB9BFCF5-BEFA-44DD-8F18-064F46241354}</Project>
       <Name>GuardianRP.UI</Name>
@@ -112,9 +115,6 @@
     <Resource Include="Resources\LancherBackgroundTop.PNG" />
     <Resource Include="Resources\LancherBackgroundTopLeft.PNG" />
     <Resource Include="Resources\LancherBackgroundTopRight.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="GuardianRP.Api.Client.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

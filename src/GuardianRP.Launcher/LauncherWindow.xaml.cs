@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GuardianRP.Api.Client;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace GuardianRP.Launcher {
 
     public partial class MainWindow : Window {
 
-        private Api.Client.ApiClient client = new Api.Client.ApiClient("guardianrp.cz");
+        private ApiClient client = new ApiClient("guardianrp.cz");
 
         public MainWindow() {
             InitializeComponent();

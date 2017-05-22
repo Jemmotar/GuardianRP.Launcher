@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.Launcher", "Guar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.UI", "GuardianRP.UI\GuardianRP.UI.csproj", "{BB9BFCF5-BEFA-44DD-8F18-064F46241354}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.Api.Client", "..\GuardianRP.Api\src\GuardianRP.Api.Client\GuardianRP.Api.Client.csproj", "{7DFB2A4D-89D0-4097-9CA3-5A7ED015D3B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BB9BFCF5-BEFA-44DD-8F18-064F46241354}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB9BFCF5-BEFA-44DD-8F18-064F46241354}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB9BFCF5-BEFA-44DD-8F18-064F46241354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DFB2A4D-89D0-4097-9CA3-5A7ED015D3B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DFB2A4D-89D0-4097-9CA3-5A7ED015D3B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DFB2A4D-89D0-4097-9CA3-5A7ED015D3B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DFB2A4D-89D0-4097-9CA3-5A7ED015D3B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
