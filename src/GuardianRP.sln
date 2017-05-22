@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.Launcher", "GuardianRP.Launcher\GuardianRP.Launcher.csproj", "{4607764B-4683-4B9B-B14C-02268337D9EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.Launcher.UI", "GuardianRP.Launcher.UI\GuardianRP.Launcher.UI.csproj", "{BB9BFCF5-BEFA-44DD-8F18-064F46241354}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.UI", "GuardianRP.UI\GuardianRP.UI.csproj", "{BB9BFCF5-BEFA-44DD-8F18-064F46241354}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

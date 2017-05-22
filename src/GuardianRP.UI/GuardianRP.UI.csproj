@@ -7,8 +7,8 @@
     <ProjectGuid>{BB9BFCF5-BEFA-44DD-8F18-064F46241354}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GuardianRP.Launcher.UI</RootNamespace>
-    <AssemblyName>GuardianRP.Launcher.UI</AssemblyName>
+    <RootNamespace>GuardianRP.UI</RootNamespace>
+    <AssemblyName>GuardianRP.UI</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

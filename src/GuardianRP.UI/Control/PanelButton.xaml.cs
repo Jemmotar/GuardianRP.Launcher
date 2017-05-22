@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GuardianRP.Launcher.UI.Control {
+namespace GuardianRP.UI.Control {
 
     public partial class PanelButton : UserControl {
 
@@ -25,16 +25,16 @@ namespace GuardianRP.Launcher.UI.Control {
         public static Dictionary<Variants, BitmapFrame[]> Textures = new Dictionary<Variants, BitmapFrame[]>() {
             {
                 Variants.Exit, new BitmapFrame[] {
-                    BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.Launcher.UI;component/Resources/PanelButtonExit.PNG")),
-                    BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.Launcher.UI;component/Resources/PanelButtonExitDown.PNG")),
-                    BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.Launcher.UI;component/Resources/PanelButtonExitDisabled.PNG"))
+                    BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.UI;component/Resources/PanelButtonExit.PNG")),
+                    BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.UI;component/Resources/PanelButtonExitDown.PNG")),
+                    BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.UI;component/Resources/PanelButtonExitDisabled.PNG"))
                 }
             },
             {
                 Variants.Hide, new BitmapFrame[] {
-                    BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.Launcher.UI;component/Resources/PanelButtonHide.PNG")),
-                    BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.Launcher.UI;component/Resources/PanelButtonHideDown.PNG")),
-                    BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.Launcher.UI;component/Resources/PanelButtonHideDisabled.PNG"))
+                    BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.UI;component/Resources/PanelButtonHide.PNG")),
+                    BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.UI;component/Resources/PanelButtonHideDown.PNG")),
+                    BitmapFrame.Create(new Uri("pack://application:,,,/GuardianRP.UI;component/Resources/PanelButtonHideDisabled.PNG"))
                 }
             }
         };
