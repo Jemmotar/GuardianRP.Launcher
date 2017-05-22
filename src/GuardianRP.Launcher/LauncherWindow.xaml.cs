@@ -17,7 +17,7 @@ namespace GuardianRP.Launcher {
 
     public partial class MainWindow : Window {
 
-        private Api.Client.ApiClient client = new Api.Client.ApiClient("localhost");
+        private Api.Client.ApiClient client = new Api.Client.ApiClient("guardianrp.cz");
 
         public MainWindow() {
             InitializeComponent();
