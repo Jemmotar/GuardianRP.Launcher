@@ -1,5 +1,6 @@
 ﻿using GuardianRP.Api.Client;
 using GuardianRP.Api.Client.Networking;
+using GuardianRP.Launcher.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace GuardianRP.Launcher {
 
     public partial class MainWindow : Window {
 
-        private SocketClient client = new SocketClient("localhost");
+        private SocketClient client = new SocketClient(Settings.Instance.ApiEndpoint);
 
         public MainWindow() {
             InitializeComponent();
@@ -62,6 +63,7 @@ namespace GuardianRP.Launcher {
             client.Send(Encoding.UTF8.GetBytes(textBox.Text));
             textBox.Text = string.Empty;
         }
+
     }
 
 }
