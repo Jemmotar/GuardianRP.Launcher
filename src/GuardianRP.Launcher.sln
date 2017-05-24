@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.Launcher", "Guar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.UI", "GuardianRP.UI\GuardianRP.UI.csproj", "{BB9BFCF5-BEFA-44DD-8F18-064F46241354}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.Service.SocketClient", "..\GuardianRP.Services\src\GuardianRP.Api.Client\GuardianRP.Service.SocketClient.csproj", "{7DFB2A4D-89D0-4097-9CA3-5A7ED015D3B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.Service.SocketClient", "..\GuardianRP.Services\src\GuardianRP.Service.SocketClient\GuardianRP.Service.SocketClient.csproj", "{7DFB2A4D-89D0-4097-9CA3-5A7ED015D3B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

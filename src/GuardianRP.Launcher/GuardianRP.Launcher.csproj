@@ -103,7 +103,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\GuardianRP.Services\src\GuardianRP.Api.Client\GuardianRP.Service.SocketClient.csproj">
+    <ProjectReference Include="..\..\GuardianRP.Services\src\GuardianRP.Service.SocketClient\GuardianRP.Service.SocketClient.csproj">
       <Project>{7DFB2A4D-89D0-4097-9CA3-5A7ED015D3B2}</Project>
       <Name>GuardianRP.Service.SocketClient</Name>
     </ProjectReference>
