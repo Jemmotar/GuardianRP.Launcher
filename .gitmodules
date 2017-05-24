@@ -1,3 +1,3 @@
-[submodule "GuardianRP.Api"]
-	path = GuardianRP.Api
-	url = https://github.com/Filipsi/GuardianRP.Api
+[submodule "GuardianRP.Services"]
+	path = GuardianRP.Services
+	url = https://github.com/Filipsi/GuardianRP.Services

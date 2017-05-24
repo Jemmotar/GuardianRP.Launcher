@@ -103,9 +103,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\GuardianRP.Api\src\GuardianRP.Api.Client\GuardianRP.Api.Client.csproj">
-      <Project>{7dfb2a4d-89d0-4097-9ca3-5a7ed015d3b2}</Project>
-      <Name>GuardianRP.Api.Client</Name>
+    <ProjectReference Include="..\..\GuardianRP.Services\src\GuardianRP.Api.Client\GuardianRP.Service.SocketClient.csproj">
+      <Project>{7DFB2A4D-89D0-4097-9CA3-5A7ED015D3B2}</Project>
+      <Name>GuardianRP.Service.SocketClient</Name>
     </ProjectReference>
     <ProjectReference Include="..\GuardianRP.UI\GuardianRP.UI.csproj">
       <Project>{BB9BFCF5-BEFA-44DD-8F18-064F46241354}</Project>

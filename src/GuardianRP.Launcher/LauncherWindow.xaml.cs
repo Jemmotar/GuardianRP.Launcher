@@ -1,6 +1,5 @@
-﻿using GuardianRP.Api.Client;
-using GuardianRP.Api.Client.Networking;
-using GuardianRP.Launcher.Configuration;
+﻿using GuardianRP.Launcher.Configuration;
+using GuardianRP.Service.SocketClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
